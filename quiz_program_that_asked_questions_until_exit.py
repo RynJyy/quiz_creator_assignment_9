@@ -5,9 +5,10 @@ from colorama import Fore, Style, init
 # Initialize colorama for colored text
 init (autoreset=True)
 # Function to display a fancy header
-print (Fore.BLUE + "=" * 34)
-print (Fore.MAGENTA + "📚 Welcome to the quiz creator! 📚")
-print (Fore.BLUE + "=" * 34 + "\n")
+def show_header():
+    print (Fore.BLUE + "=" * 34)
+    print (Fore.MAGENTA + "📚 Welcome to the quiz creator! 📚")
+    print (Fore.BLUE + "=" * 34 + "\n")
 # Add a description on how to use the program
 print (Fore.CYAN + "This program allows you to create your own quiz questions.")
 print (Fore.CYAN + "You can add questions, specify answers, and save them for later use.\n")
@@ -59,6 +60,7 @@ def save_quiz_data(data, filename='quiz_questions.json'):
     print(Fore.GREEN + "Quiz question saved successfully!")
 # Main function to control the quiz creator
 def main():
+    show_header()
     # Loop to keep asking for new questions until user exits
     while True:
         question_data = get_question()
