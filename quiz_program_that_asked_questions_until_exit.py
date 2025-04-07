@@ -6,17 +6,17 @@ from colorama import Fore, Style, init
 init (autoreset=True)
 # Function to display a fancy header
 def show_header():
-    print (Fore.BLUE + "=" * 34)
-    print (Fore.MAGENTA + "📚 Welcome to the quiz creator! 📚")
-    print (Fore.BLUE + "=" * 34 + "\n")
-# Add a description on how to use the program
-print (Fore.CYAN + "This program allows you to create your own quiz questions.")
-print (Fore.CYAN + "You can add questions, specify answers, and save them for later use.\n")
+    print(Fore.BLUE + "=" * 34)
+    print(Fore.MAGENTA + "📚 Welcome to the quiz creator! 📚")
+    print(Fore.BLUE + "=" * 34 + "\n")
+    # Add a description on how to use the program
+    print(Fore.CYAN + "This program allows you to create your own quiz questions.")
+    print(Fore.CYAN + "You can add questions, specify answers, and save them for later use.\n")
 # Function to get a quiz question from the user
 def get_question():
     print(Fore.YELLOW + "\nEnter a new quiz question:")
     question = input(Fore.GREEN + "Question: ")
-# Collect four possible answers (a, b, c, d)
+    # Collect four possible answers (a, b, c, d)
     answers = []
     for option in ['a', 'b', 'c', 'd']:
         answer = input(Fore.GREEN + f"Option {option}: ")
@@ -68,7 +68,7 @@ def main():
         # Ask if the user wants to add another question
         another = input(Fore.YELLOW + "Do you want to add another question? (yes/no): ").lower()
         if another != 'yes':
-            print(Fore.BLUE + "Thank you for using the quiz creator!")
+            print(Fore.BLUE + "Thank you for using the quiz creator your file is now saved!")
             break
 # Execute the main function when the script runs
 if __name__ == "__main__":
