@@ -34,14 +34,14 @@ def get_question():
     while difficulty not in ['intro', 'beginner', 'intermediate']:
         print(Fore.RED + "Invalid input. Please enter intro, beginner, or intermediate."")
         difficulty = input(Fore.GREEN + "Difficulty (intro/beginner/intermediate): ").lower()
-# Return the collected data as a dictionary
- return {
-        'question': question,
-        'answers': answers,
-        'correct_answer': correct_answer,
-        'category': category,
-        'difficulty': difficulty
-    }
+    # Return the collected data as a dictionary
+    return {
+            'question': question,
+            'answers': answers,
+            'correct_answer': correct_answer,
+            'category': category,
+            'difficulty': difficulty
+        }
 # Function to save quiz data to a file
 def save_quiz_data(data, filename='quiz_questions.json'):
     try:
