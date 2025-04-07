@@ -28,7 +28,12 @@ def get_question():
         else:
             print(Fore.RED + "Invalid input. Please enter a, b, c, or d.")
 # Get question category
+    category = input(Fore.GREEN + "Category: ")
 # Get difficulty level
+    difficulty = input(Fore.GREEN + "Difficulty (intro/beginner/intermediate): ").lower()
+    while difficulty not in ['intro', 'beginner', 'intermediate']:
+        print(Fore.RED + "Invalid input. Please enter intro, beginner, or intermediate."")
+        difficulty = input(Fore.GREEN + "Difficulty (intro/beginner/intermediate): ").lower()
 # Return the collected data as a dictionary
 # Function to save quiz data to a file
 # Append new question data to the existing list
