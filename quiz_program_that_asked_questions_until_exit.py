@@ -12,8 +12,21 @@ print (Fore.BLUE + "=" * 34 + "\n")
 print (Fore.CYAN + "This program allows you to create your own quiz questions.")
 print (Fore.CYAN + "You can add questions, specify answers, and save them for later use.\n")
 # Function to get a quiz question from the user
+def get_question():
+    print(Fore.YELLOW + "\nEnter a new quiz question:")
+    question = input(Fore.GREEN + "Question: ")
 # Collect four possible answers (a, b, c, d)
+    answers = []
+    for option in ['a', 'b', 'c', 'd']:
+        answer = input(Fore.GREEN + f"Option {option}: ")
+        answers.append(answer)
 # Get the correct answer from the user (validate input)
+    while True:
+        correct_answer = input(Fore.GREEN + "Correct answer (a/b/c/d): ").lower()
+        if correct_answer in ['a', 'b', 'c', 'd']:
+            break
+        else:
+            print(Fore.RED + "Invalid input. Please enter a, b, c, or d.")
 # Get question category
 # Get difficulty level
 # Return the collected data as a dictionary
@@ -24,3 +37,4 @@ print (Fore.CYAN + "You can add questions, specify answers, and save them for la
 # Loop to keep asking for new questions until user exits
 # Ask if the user wants to add another question
 # Execute the main function when the script runs
+
