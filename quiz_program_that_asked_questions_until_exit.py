@@ -32,7 +32,7 @@ def get_question():
     # Get difficulty level
     difficulty = input(Fore.GREEN + "Difficulty (intro/beginner/intermediate): ").lower()
     while difficulty not in ['intro', 'beginner', 'intermediate']:
-        print(Fore.RED + "Invalid input. Please enter intro, beginner, or intermediate."")
+        print(Fore.RED + "Invalid input. Please enter intro, beginner, or intermediate.")
         difficulty = input(Fore.GREEN + "Difficulty (intro/beginner/intermediate): ").lower()
     # Return the collected data as a dictionary
     return {
