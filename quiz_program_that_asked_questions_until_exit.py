@@ -1,4 +1,7 @@
 # Import necessary modules
+import json
+import random
+from colorama import Fore, Style, init
 # Initialize colorama for colored text
 # Function to display a fancy header
 # Function to get a quiz question from the user
