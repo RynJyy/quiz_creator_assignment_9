@@ -58,7 +58,17 @@ def save_quiz_data(data, filename='quiz_questions.json'):
         json.dump(existing_data, file, indent=4)
     print(Fore.GREEN + "Quiz question saved successfully!")
 # Main function to control the quiz creator
-# Loop to keep asking for new questions until user exits
-# Ask if the user wants to add another question
+def main():
+    # Loop to keep asking for new questions until user exits
+    while True:
+        question_data = get_question()
+        save_quiz_data(question_data)
+        # Ask if the user wants to add another question
+        another = input(Fore.YELLOW + "Do you want to add another question? (yes/no): ").lower()
+        if another != 'yes':
+            print(Fore.BLUE + "Thank you for using the quiz creator!")
+            break
 # Execute the main function when the script runs
+if __name__ == "__main__":
+    main()
 
