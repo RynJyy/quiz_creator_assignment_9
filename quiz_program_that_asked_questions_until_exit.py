@@ -2,8 +2,10 @@
 import json
 import random
 from colorama import Fore, Style, init
+
 # Initialize colorama for colored text
 init (autoreset=True)
+
 # Function to display a fancy header
 def show_header():
     print(Fore.BLUE + "=" * 34)
@@ -12,6 +14,7 @@ def show_header():
     # Add a description on how to use the program
     print(Fore.CYAN + "This program allows you to create your own quiz questions.")
     print(Fore.CYAN + "You can add questions, specify answers, and save them for later use.\n")
+
 # Function to get a quiz question from the user
 def get_question():
     print(Fore.YELLOW + "\nEnter a new quiz question:")
@@ -43,6 +46,7 @@ def get_question():
             'category': category,
             'difficulty': difficulty
         }
+
 # Function to save quiz data to a file
 def save_quiz_data(data, filename='quiz_questions.json'):
     try:
@@ -58,6 +62,7 @@ def save_quiz_data(data, filename='quiz_questions.json'):
     with open(filename, 'w') as file:
         json.dump(existing_data, file, indent=4)
     print(Fore.GREEN + "Quiz question saved successfully!")
+
 # Main function to control the quiz creator
 def main():
     show_header()
