@@ -15,43 +15,6 @@ This is a simple interactive Python program that allows users to create their ow
 
 ---
 
-## Installation 🔧
-### Prerequisites
-Make sure you have Python installed (Python 3 recommended).
-
-### Install Dependencies
-Run the following command to install required dependencies:
-```bash
-pip install colorama
-```
-
----
-
-## Usage 📝
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/quiz-creator.git
-cd quiz-creator
-```
-2. Run the script:
-```bash
-python quiz_creator.py
-```
-3. Follow the prompts to enter quiz questions, answer choices, correct answers, categories, and difficulty levels.
-4. Your questions will be saved in `quiz_questions.json`.
-
----
-
-## File Structure 📂
-```
-quiz_creator/
-│── quiz_creator.py   # Main script
-│── quiz_questions.json  # Stored quiz questions (auto-generated)
-│── README.md  # Project documentation
-```
-
----
-
 ## Example Output 🎮
 ```
 ==================================
