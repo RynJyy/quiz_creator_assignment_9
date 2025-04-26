@@ -27,8 +27,25 @@ def check_answer(user_answer):
         window.after(1000, next_question)
     else:
         window.after(1000, show_final_score)
-        
+
 # Display next question
+def next_question():
+    global current_question
+    current_question = random.choice(quiz_data)
+
+    question_label.config(text=current_question['question'])
+
+    pastel_colors = ["#ffb6b9", "#c1c8e4", "#d5f4e6", "#fce1e4"]
+    for i, option in enumerate(['a', 'b', 'c', 'd']):
+        answer_buttons[i].config(
+            text=current_question['answers'][i],
+            command=lambda opt=option: check_answer(opt),
+            bg=pastel_colors[i % len(pastel_colors)],
+            activebackground="#555555"  # Darker on click
+        )
+
+    result_label.config(text="")
+
 # Show final score
 # Set up main window
 # Widgets
