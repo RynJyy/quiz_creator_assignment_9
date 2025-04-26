@@ -59,7 +59,6 @@ The **Quiz App** loads the saved quiz questions and provides a colorful, interac
 
 ### GUI Preview:
 - Questions displayed in a fun font with a black background.
-- Answer options in colorful pastel buttons.
 - Real-time feedback like "Correct! 🎉" or "Wrong! 😢".
 - Final score popup showing total score and percentage.
 
