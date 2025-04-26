@@ -38,10 +38,10 @@ def next_question():
 
     for i, option in enumerate(['a', 'b', 'c', 'd']):
         answer_buttons[i].config(
-            text=current_question['answers'][i],
-            command=lambda opt=option: check_answer(opt),
-            bg="white",
-            activebackground="#d9d9d9"  # Light gray on click
+            text = current_question['answers'][i],
+            command = lambda opt=option: check_answer(opt),
+            bg = "white",
+            activebackground = "#d9d9d9"  # Light gray on click
         )
 
     result_label.config (text="")
@@ -56,7 +56,7 @@ def show_final_score():
 window = tk.Tk()
 window.title("✨ Quiz App ✨")
 window.geometry("550x550")
-window.configure(bg="white")  # Black background
+window.configure(bg="white") 
 
 quiz_data = load_quiz_data()
 score = 0
