@@ -55,7 +55,7 @@ def show_final_score():
 # Set up main window
 window = tk.Tk()
 window.title("✨ Quiz App ✨")
-window.geometry("550x450")
+window.geometry("550x550")
 window.configure(bg="#000000")  # Black background
 
 quiz_data = load_quiz_data()
@@ -71,16 +71,16 @@ question_label.pack(pady=30)
 
 answer_buttons = []
 for i in range(4):
-    btn = tk.Button(window, text="", width=30, height=2, font=("Comic Sans MS", 12), fg="#333333", relief="ridge")
+    btn = tk.Button(window, text="", width=30, height=2, font=("Comic Sans MS", 12), fg="#333333", relief="flat")
     btn.pack(pady=8)
     answer_buttons.append(btn)
 
 result_label = tk.Label(window, text="", font=("Comic Sans MS", 16, "bold"), bg="#000000", fg="white")
 result_label.pack(pady=15)
 
-exit_button = tk.Button(window, text="Exit Quiz", command=window.destroy, bg="#ff7f7f", fg="white",
+exit_button = tk.Button(window, text="Exit Quiz", command=window.destroy, bg="#000000", fg="black",
                         font=("Comic Sans MS", 12, "bold"), width=15, height=2, relief="ridge")
-exit_button.pack(pady = 20)
+exit_button.pack(pady=20)
 
 # Start the first question
 if quiz_data:
