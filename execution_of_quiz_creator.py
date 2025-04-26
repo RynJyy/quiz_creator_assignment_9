@@ -38,15 +38,25 @@ def next_question():
     pastel_colors = ["#ffb6b9", "#c1c8e4", "#d5f4e6", "#fce1e4"]
     for i, option in enumerate(['a', 'b', 'c', 'd']):
         answer_buttons[i].config(
-            text=current_question['answers'][i],
-            command=lambda opt=option: check_answer(opt),
-            bg=pastel_colors[i % len(pastel_colors)],
-            activebackground="#555555"  # Darker on click
+            text = current_question['answers'][i],
+            command = lambda opt = option: check_answer(opt),
+            bg = pastel_colors [i % len(pastel_colors)],
+            activebackground = "#555555"  # Darker on click
         )
 
-    result_label.config(text="")
+    result_label.config (text="")
 
 # Show final score
+def show_final_score():
+    percentage = (score / total_questions) * 100
+    messagebox.showinfo("Quiz Finished 🎀", f"Your Score: {score}/{total_questions}\nPercentage: {percentage:.2f}%")
+    window.destroy()
+
 # Set up main window
+window = tk.Tk()
+window.title("✨ Quiz App ✨")
+window.geometry("550x450")
+window.configure(bg="#000000")  # Black background
+
 # Widgets
 # Start the first question
