@@ -1,0 +1,74 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "answers": [
+            "Paris",
+            "Rome",
+            "Madrid ",
+            "Berlin"
+        ],
+        "correct_answer": "a",
+        "category": "geography ",
+        "difficulty": "intro"
+    },
+    {
+        "question": "Which element has the chemical symbol 'O'?",
+        "answers": [
+            "Oxygen",
+            "Gold",
+            "Iron",
+            "Osmium"
+        ],
+        "correct_answer": "a",
+        "category": "chemistry",
+        "difficulty": "intro"
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "answers": [
+            "Vincent van Gogh",
+            "Pablo Picasso",
+            "Leonardo da Vinci",
+            "Claude Monet"
+        ],
+        "correct_answer": "c",
+        "category": "art",
+        "difficulty": "intro"
+    },
+    {
+        "question": "What is the largest planet in our Solar System?",
+        "answers": [
+            "Earth",
+            "Jupiter",
+            "Saturn",
+            "Neptune"
+        ],
+        "correct_answer": "b",
+        "category": "science",
+        "difficulty": "intro"
+    },
+    {
+        "question": "How old is Ryan Jay?",
+        "answers": [
+            "17",
+            "19",
+            "18",
+            "20"
+        ],
+        "correct_answer": "c",
+        "category": "Ryan Jay",
+        "difficulty": "beginner"
+    },
+    {
+        "question": "Which country is famous for inventing pizza?",
+        "answers": [
+            "France",
+            "China",
+            "Greece",
+            "Italy"
+        ],
+        "correct_answer": "d",
+        "category": "food",
+        "difficulty": "intermediate"
+    }
+]
