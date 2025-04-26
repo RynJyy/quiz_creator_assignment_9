@@ -58,5 +58,12 @@ window.title("✨ Quiz App ✨")
 window.geometry("550x450")
 window.configure(bg="#000000")  # Black background
 
+quiz_data = load_quiz_data()
+score = 0
+questions_asked = 0
+total_questions = len(quiz_data)
+
+current_question = None
+
 # Widgets
 # Start the first question
