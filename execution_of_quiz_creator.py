@@ -83,3 +83,9 @@ exit_button = tk.Button(window, text="Exit Quiz", command=window.destroy, bg="#f
 exit_button.pack(pady = 20)
 
 # Start the first question
+if quiz_data:
+    next_question()
+else:
+    question_label.config(text="No quiz data available.")
+
+window.mainloop()
