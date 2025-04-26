@@ -6,6 +6,8 @@ This project is divided into two parts:
 - **Part 1:** A CLI (Command-Line Interface) Quiz Creator to create and save quiz questions.
 - **Part 2:** A GUI (Graphical User Interface) Quiz App to play the quiz based on saved questions.
 
+---
+
 ## 🛠️ Part 1: Quiz Creator (CLI)
 
 This is a simple interactive Python program that allows users to create their own quiz questions. It collects multiple-choice questions, stores them in a JSON file, and ensures data validation for accuracy.
@@ -52,14 +54,14 @@ The **Quiz App** loads the saved quiz questions and provides a colorful, interac
 
 ### Features:
 - Randomized question selection.
-- Colorful pastel buttons.
 - Real-time feedback for correct or wrong answers.
 - Final score display with percentage.
 - Simple exit button.
 
 ### GUI Preview:
-- Questions displayed in a fun font with a black background.
-- Real-time feedback like "Correct! 🎉" or "Wrong! 😢".
+- Questions displayed in a formal font with with background.
+- Sleek and minimal design.
+- Real-time feedback like "Correct!" or "Wrong!".
 - Final score popup showing total score and percentage.
 
 ---
