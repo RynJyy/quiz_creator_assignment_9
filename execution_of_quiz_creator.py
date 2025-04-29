@@ -24,8 +24,10 @@ def check_answer(user_answer):
         result_label.config(text=f"Wrong! Correct: {correct}", fg="#ff7f7f")  # Soft red
 
     questions_asked += 1
+    next_button.config(state=tk.NORMAL)  # Enable the next button after answering
+
     if questions_asked < total_questions:
-        window.after(1000, next_question)
+        next_button.config(state=tk.NORMAL)  # Keep it enabled for manual control
     else:
         window.after(1000, show_final_score)
 
@@ -36,15 +38,21 @@ def next_question():
 
     question_label.config(text=current_question['question'])
 
+    # Update category and difficulty
+    category_label.config(text=f"Category: {current_question.get('category', 'N/A')}")
+    difficulty_label.config(text=f"Difficulty: {current_question.get('difficulty', 'N/A')}")
+
+    # Set answer buttons
     for i, option in enumerate(['a', 'b', 'c', 'd']):
         answer_buttons[i].config(
-            text = current_question['answers'][i],
-            command = lambda opt=option: check_answer(opt),
-            bg = "white",
-            activebackground = "#d9d9d9"  # Light gray on click
+            text=current_question['answers'][i],
+            command=lambda opt=option: check_answer(opt),
+            bg="white",
+            activebackground="#d9d9d9"  # Light gray on click
         )
 
-    result_label.config (text="")
+    result_label.config(text="")
+    next_button.config(state=tk.DISABLED)  # Disable "Next" button until the answer is selected
 
 # Show final score
 def show_final_score():
@@ -55,7 +63,7 @@ def show_final_score():
 # Set up main window
 window = tk.Tk()
 window.title("✨ Quiz App ✨")
-window.geometry("550x550")
+window.geometry("700x700")
 window.configure(bg="white") 
 
 quiz_data = load_quiz_data()
@@ -68,6 +76,16 @@ current_question = None
 # Widgets
 question_label = tk.Label(window, text="", wraplength=500, font=("Helvetica", 18, "bold"), bg="white", fg="black")
 question_label.pack(pady=30)
+
+category_label = tk.Label(window, text="", font=("Helvetica", 12, "italic"), bg="white", fg="gray")
+category_label.pack()
+
+difficulty_label = tk.Label(window, text="", font=("Helvetica", 12, "italic"), bg="white", fg="gray")
+difficulty_label.pack(pady=(0, 20))
+
+next_button = tk.Button(window, text="Next", command=next_question, bg="white", fg="black", font=("Helvetica", 12, "bold"), width=15, height=2, relief="ridge")
+next_button.pack(pady=20)
+next_button.config(state=tk.DISABLED)  # Disable the button initially
 
 answer_buttons = []
 for i in range(4):
